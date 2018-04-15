@@ -1,0 +1,33 @@
+
+<script type="text/javascript">
+	var l23=0;l24=0;
+	function la23()
+	{
+	if (document.getElementById("l23t").value!="") {
+	if (l23==0 & l24==0) {
+	document.getElementsByClassName("l23")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l23")[0].innerHTML = document.getElementById("l23t").value;
+	l23=1;
+	document.getElementsByClassName("l24")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l24")[0].innerHTML = document.getElementById("l23t").value;
+	l24=1;
+	}
+	else
+	window.alert("Clashes with L23+L24 or TCC1");}
+else
+	window.alert("Please select an L23+L24 course")
+	}
+	function resetl23()
+	{
+		if (l23==1 & l24==1) {
+	document.getElementsByClassName("l23")[0].innerHTML = "TCC1/L23";
+	document.getElementsByClassName("l23")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l24")[0].innerHTML = "L24";
+	document.getElementsByClassName("l24")[0].style.backgroundColor="#FFFFCC";
+	document.getElementById("l23t").value="";
+	l23=0;
+	l24=0;
+	}else
+	window.alert("Please select an L23+L24 course")
+	}
+</script>

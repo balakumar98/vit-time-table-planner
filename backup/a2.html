@@ -1,0 +1,72 @@
+<script>
+var l31=0,l44=0,l57=0;
+function a2()
+{
+	if (document.getElementById("a2t").value!="") {
+	if (l31==0 & l44==0) {
+	document.getElementsByClassName("l31")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l31")[0].innerHTML = document.getElementById("a2t").value;
+	l31=1;
+	document.getElementsByClassName("l44")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l44")[0].innerHTML = document.getElementById("a2t").value;
+	l44=1;
+	}
+	else
+	window.alert("Clashes with L31+L32/L43+L44 or A2/A2+TA2");}
+else
+	window.alert("Please select an A2 course")
+}
+function reseta2()
+{
+	
+	if(l31==1 & l44==1 & l57==0)
+	{
+	document.getElementsByClassName("l31")[0].innerHTML = "A2/L31";
+	document.getElementsByClassName("l31")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l44")[0].innerHTML = "A2/L44";
+	document.getElementsByClassName("l44")[0].style.backgroundColor="#FFFFCC";
+	document.getElementById("a2t").value="";
+	l31=0;
+	l44=0;
+	}
+	else
+		window.alert("Please select an A2 course");
+}
+function ta2()
+{
+	if (document.getElementById("ta2t").value!="") {
+	if (l31==0 & l44==0 & l57==0) {
+	document.getElementsByClassName("l31")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l31")[0].innerHTML = document.getElementById("ta2t").value;
+	l31++;
+	document.getElementsByClassName("l44")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l44")[0].innerHTML = document.getElementById("ta2t").value;
+	l44++;
+	document.getElementsByClassName("l57")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l57")[0].innerHTML = document.getElementById("ta2t").value;
+	l57++;
+	}
+	else
+	window.alert("Clashes with L31+L32/L43+L44/L57+L58 or A2+TA2");}
+else
+	window.alert("Please select an A2+TA2 course")
+
+}
+function resetta2()
+{
+	if(l31==1 & l44==1 & l57==1){
+	document.getElementsByClassName("l31")[0].innerHTML = "A2/L31";
+	document.getElementsByClassName("l31")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l44")[0].innerHTML = "A2/L44";
+	document.getElementsByClassName("l44")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l57")[0].innerHTML = "TA2/L57";
+	document.getElementsByClassName("l57")[0].style.backgroundColor="#FFFFCC";
+	document.getElementById("ta2t").value="";
+	l31=0;
+	l44=0;
+	l57=0;
+	}
+else
+window.alert("Please select an A2+TA2 course");
+}
+</script>

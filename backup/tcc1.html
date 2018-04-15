@@ -1,0 +1,53 @@
+<script>
+var l23=0,l29=0;
+function tcc11()
+{
+	if (document.getElementById("tcc11t").value!="") {
+	if (l23==0) {
+	document.getElementsByClassName("l23")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l23")[0].innerHTML = document.getElementById("tcc11t").value;
+	l23=1;
+	}
+	else
+	window.alert("Clashes with L23+L24 or TCC1/C1+TC1+TCC1");}
+else
+	window.alert("Please select an TCC1 course")
+}
+function resettcc11()
+{
+	if(l23==1)
+	{
+		document.getElementsByClassName("l23")[0].innerHTML = "TCC1/L23";
+		document.getElementsByClassName("l23")[0].style.backgroundColor="#FFFFCC";
+		document.getElementById("tcc11t").value="";
+		l23=0;
+	}
+	else
+		window.alert("Please select an TCC1 course");
+}
+function tdd11()
+{
+	if (document.getElementById("tdd11t").value!="") {
+	if (l29==0) {
+	document.getElementsByClassName("l29")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l29")[0].innerHTML = document.getElementById("tdd11t").value;
+	l29++;
+	}
+	else
+	window.alert("Clashes with L29+L30 or TDD1/D1+TD1+TDD1");}
+else
+	window.alert("Please select an TDD1 course")
+
+}
+function resettdd11()
+{
+	if(l29==1){
+	document.getElementsByClassName("l29")[0].innerHTML = "TDD1/L29";
+	document.getElementsByClassName("l29")[0].style.backgroundColor="#FFFFCC";
+		document.getElementById("tdd11t").value="";
+	l29=0;
+}
+else
+window.alert("Please select an TDD1 course");
+}
+</script>

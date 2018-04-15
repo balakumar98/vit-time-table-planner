@@ -1,0 +1,32 @@
+<script type="text/javascript">
+	var l43=0;l44=0;
+	function la43()
+	{
+	if (document.getElementById("l43t").value!="") {
+	if (l43==0 & l44==0) {
+	document.getElementsByClassName("l43")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l43")[0].innerHTML = document.getElementById("l43t").value;
+	l43=1;
+	document.getElementsByClassName("l44")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l44")[0].innerHTML = document.getElementById("l43t").value;
+	l44=1;
+	}
+	else
+	window.alert("Clashes with L43+L44 or C2/A2");}
+else
+	window.alert("Please select an L43+L44 course")
+	}
+	function resetl43()
+	{
+		if (l43==1 & l44==1) {
+	document.getElementsByClassName("l43")[0].innerHTML = "C2/L43";
+	document.getElementsByClassName("l43")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l44")[0].innerHTML = "A2/L44";
+	document.getElementsByClassName("l44")[0].style.backgroundColor="#FFFFCC";
+	document.getElementById("l43t").value="";
+	l43=0;
+	l44=0;
+	}else
+	window.alert("Please select an L43+L44 course")
+	}
+</script>

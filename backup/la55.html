@@ -1,0 +1,33 @@
+
+<script type="text/javascript">
+	var l55=0;l56=0;
+	function la55()
+	{
+	if (document.getElementById("l55t").value!="") {
+	if (l55==0 & l56==0) {
+	document.getElementsByClassName("l55")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l55")[0].innerHTML = document.getElementById("l55t").value;
+	l55=1;
+	document.getElementsByClassName("l56")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l56")[0].innerHTML = document.getElementById("l55t").value;
+	l56=1;
+	}
+	else
+	window.alert("Clashes with L55+L56 or E2/C2");}
+else
+	window.alert("Please select an L55+L56 course")
+	}
+	function resetl55()
+	{
+		if (l55==1 & l56==1) {
+	document.getElementsByClassName("l55")[0].innerHTML = "E2/L55";
+	document.getElementsByClassName("l55")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l56")[0].innerHTML = "C2/L56";
+	document.getElementsByClassName("l56")[0].style.backgroundColor="#FFFFCC";
+	document.getElementById("l55t").value="";
+	l55=0;
+	l56=0;
+	}else
+	window.alert("Please select an L55+L56 course")
+	}
+</script>

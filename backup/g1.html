@@ -1,0 +1,72 @@
+
+<script>
+var l8=0,l21=0,l5=0;
+function g1()
+{
+	if (document.getElementById("g1t").value!="") {
+	if (l8==0 & l21==0) {
+	document.getElementsByClassName("l8")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l8")[0].innerHTML = document.getElementById("g1t").value;
+	l8=1;
+	document.getElementsByClassName("l21")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l21")[0].innerHTML = document.getElementById("g1t").value;
+	l21=1;
+	}
+	else
+	window.alert("Clashes with L7+L8/L21+L22 or G1/G1+TG1");}
+else
+	window.alert("Please select an G1 course")
+}
+function resetg1()
+{
+	if(l8==1 & l21==1 & l5==0)
+	{
+		document.getElementsByClassName("l8")[0].innerHTML = "G1/L8";
+		document.getElementsByClassName("l8")[0].style.backgroundColor="#FFFFCC";
+		document.getElementsByClassName("l21")[0].innerHTML = "G1/L21";
+		document.getElementsByClassName("l21")[0].style.backgroundColor="#FFFFCC";
+		document.getElementById("g1t").value="";
+		l21=0;
+		l8=0;
+	}
+	else
+		window.alert("Please select an G1 course");
+}
+function tg1()
+{
+	if (document.getElementById("tg1t").value!="") {
+	if (l8==0 & l21==0 & l5==0) {
+	document.getElementsByClassName("l8")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l8")[0].innerHTML = document.getElementById("tg1t").value;
+	l8++;
+	document.getElementsByClassName("l21")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l21")[0].innerHTML = document.getElementById("tg1t").value;
+	l21++;
+	document.getElementsByClassName("l5")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l5")[0].innerHTML = document.getElementById("tg1t").value;
+	l5++;
+	}
+	else
+	window.alert("Clashes with L5+L6/L7+L8/L21+L22 or G1/G1+TG1");}
+else
+	window.alert("Please select an G1+TG1 course")
+
+}
+function resettg1()
+{
+	if(l8==1 & l21==1 & l5==1){
+	document.getElementsByClassName("l8")[0].innerHTML = "G1/L8";
+	document.getElementsByClassName("l8")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l21")[0].innerHTML = "G1/L21";
+	document.getElementsByClassName("l21")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l5")[0].innerHTML = "TG1/L5";
+	document.getElementsByClassName("l5")[0].style.backgroundColor="#FFFFCC";
+	document.getElementById("tg1t").value="";
+	l8=0;
+	l21=0;
+	l5=0;
+}
+else
+window.alert("Please select an G1+TG1 course");
+}
+</script>

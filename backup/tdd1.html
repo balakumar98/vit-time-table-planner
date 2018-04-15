@@ -1,0 +1,46 @@
+<script>
+var l19=0,l3=0,l16=0,l29=0;
+function tdd1()
+{
+	if (document.getElementById("tdd1t").value!="") {
+	if (l19==0 & l3==0 & l16==0 & l29==0) {
+	document.getElementsByClassName("l19")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l19")[0].innerHTML = document.getElementById("tdd1t").value;
+	document.getElementsByClassName("l3")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l3")[0].innerHTML = document.getElementById("tdd1t").value;
+	document.getElementsByClassName("l16")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l16")[0].innerHTML = document.getElementById("tdd1t").value;
+	document.getElementsByClassName("l29")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l29")[0].innerHTML = document.getElementById("tdd1t").value;
+	l19=1;
+	l3=1;
+	l16=1;
+	l29=1;
+	}
+	else
+	window.alert("Clashes with L3+L4/L15+L16/L19+L20/L29+L30 or D1/D1+TD1/TD1/TDD1/D1+TD1+TDD1");}
+else
+	window.alert("Please select an D1+TD1+TDD1 course")
+}
+function resettdd1()
+{
+	if(l19==1 & l3==1 & l16==1 & l29==1)
+	{
+		document.getElementsByClassName("l19")[0].innerHTML = "D1/L19";
+		document.getElementsByClassName("l19")[0].style.backgroundColor="#FFFFCC";
+		document.getElementsByClassName("l3")[0].innerHTML = "D1/L3";
+		document.getElementsByClassName("l3")[0].style.backgroundColor="#FFFFCC";
+		document.getElementsByClassName("l16")[0].innerHTML = "TD1/L16";
+		document.getElementsByClassName("l16")[0].style.backgroundColor="#FFFFCC";
+		document.getElementsByClassName("l29")[0].innerHTML = "TDD1/L29";
+		document.getElementsByClassName("l29")[0].style.backgroundColor="#FFFFCC";
+		document.getElementById("tdd1t").value="";
+		l19=0;
+		l3=0;
+		l16=0;
+		l29=0;
+	}
+	else
+		window.alert("Please select an D1+TD1+TDD1 course");
+}
+</script>

@@ -1,0 +1,34 @@
+
+<script type="text/javascript">
+	var l47=0;l48=0;
+	function la47()
+	{
+	if (document.getElementById("l47t").value!="") {
+	if (l47==0 & l48==0) {
+	document.getElementsByClassName("l47")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l47")[0].innerHTML = document.getElementById("l47t").value;
+	l47=1;
+	document.getElementsByClassName("l48")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l48")[0].innerHTML = document.getElementById("l47t").value;
+	l48=1;
+	}
+	else{
+	window.alert("Clashes with L47+L48 or TBB2");
+	document.getElementById("l47t").value="";}}
+else
+	window.alert("Please select an L47+L48 course")
+	}
+	function resetl47()
+	{
+		if (l47==1 & l48==1) {
+	document.getElementsByClassName("l47")[0].innerHTML = "TBB2";
+	document.getElementsByClassName("l47")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l48")[0].innerHTML = "L48";
+	document.getElementsByClassName("l48")[0].style.backgroundColor="#FFFFCC";
+	document.getElementById("l47t").value="";
+	l47=0;
+	l48=0;
+	}else
+	window.alert("Please select an L47+L48 course")
+	}
+</script>

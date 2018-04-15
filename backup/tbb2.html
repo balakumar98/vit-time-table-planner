@@ -1,0 +1,72 @@
+
+<script>
+var l37=0,l50=0,l34=0,l47=0;
+function tbb2()
+{
+	if (document.getElementById("tbb2t").value!="") {
+	if (l37==0 & l50==0 & l34==0 & l47==0) {
+	document.getElementsByClassName("l37")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l37")[0].innerHTML = document.getElementById("tbb2t").value;
+	document.getElementsByClassName("l50")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l50")[0].innerHTML = document.getElementById("tbb2t").value;
+	document.getElementsByClassName("l34")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l34")[0].innerHTML = document.getElementById("tbb2t").value;
+	document.getElementsByClassName("l47")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l47")[0].innerHTML = document.getElementById("tbb2t").value;
+	l37=1;
+	l50=1;
+	l34=1;
+	l47=1;
+	}
+	else
+	window.alert("Clashes with L33+L34/L37+L38/L47+L48/L49+L50 or B2/B2+TB2/TB2/TBB2/B2+TB2+TBB2");}
+else
+	window.alert("Please select an B2+TB2+TBB2 course")
+}
+function resettbb2()
+{
+	if(l37==1 & l50==1 & l34==1 & l47==1)
+	{
+		document.getElementsByClassName("l37")[0].innerHTML = "B2/L37";
+		document.getElementsByClassName("l37")[0].style.backgroundColor="#FFFFCC";
+		document.getElementsByClassName("l50")[0].innerHTML = "B2/L50";
+		document.getElementsByClassName("l50")[0].style.backgroundColor="#FFFFCC";
+		document.getElementsByClassName("l34")[0].innerHTML = "TB2/L34";
+		document.getElementsByClassName("l34")[0].style.backgroundColor="#FFFFCC";
+		document.getElementsByClassName("l47")[0].innerHTML = "TBB2/L47";
+		document.getElementsByClassName("l47")[0].style.backgroundColor="#FFFFCC";
+		document.getElementById("tbb2t").value="";
+		l37=0;
+		l34=0;
+		l47=0;
+		l50=0;
+	}
+	else
+		window.alert("Please select an B2+TB2+TBB2 course");
+}
+function tbb22()
+{
+	if (document.getElementById("tbb22t").value!="") {
+	if (l47==0) {
+	document.getElementsByClassName("l47")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l47")[0].innerHTML = document.getElementById("tbb22t").value;
+	l47++;
+	}
+	else
+	window.alert("Clashes with L47+L48 or TBB2/B2+TB2+TBB2");}
+else
+	window.alert("Please select an TBB2 course")
+
+}
+function resettbb22()
+{
+	if(l47==1){
+	document.getElementsByClassName("l47")[0].innerHTML = "TBB2/L47";
+	document.getElementsByClassName("l47")[0].style.backgroundColor="#FFFFCC";
+	document.getElementById("tbb22t").value="";
+	l47=0;
+}
+else
+window.alert("Please select an TBB2 course");
+}
+</script>

@@ -1,0 +1,32 @@
+<script type="text/javascript">
+	var l1=0;l2=0;
+	function la1()
+	{
+	if (document.getElementById("l1t").value!="") {
+	if (l1==0 & l2==0) {
+	document.getElementsByClassName("l1")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l1")[0].innerHTML = document.getElementById("l1t").value;
+	l1=1;
+	document.getElementsByClassName("l2")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l2")[0].innerHTML = document.getElementById("l1t").value;
+	l2=1;
+	}
+	else
+	window.alert("Clashes with L1+L2 or A1/F1");}
+else
+	window.alert("Please select an L1+L2 course")
+	}
+	function resetl1()
+	{
+		if (l1==1 & l2==1) {
+	document.getElementsByClassName("l1")[0].innerHTML = "A1/L1";
+	document.getElementsByClassName("l1")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l2")[0].innerHTML = "F1/L2";
+	document.getElementsByClassName("l2")[0].style.backgroundColor="#FFFFCC";
+	document.getElementById("l1t").value="";
+	l1=0;
+	l2=0;
+	}else
+	window.alert("Please select an L1+L2 course")
+	}
+</script>

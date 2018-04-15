@@ -1,0 +1,72 @@
+
+<script>
+var l2=0,l15=0,l28=0;
+function f1()
+{
+	if (document.getElementById("f1t").value!="") {
+	if (l2==0 & l15==0) {
+	document.getElementsByClassName("l2")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l2")[0].innerHTML = document.getElementById("f1t").value;
+	l2=1;
+	document.getElementsByClassName("l15")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l15")[0].innerHTML = document.getElementById("f1t").value;
+	l15=1;
+	}
+	else
+	window.alert("Clashes with L1+L2/L15+L16 or F1/F1+TF1");}
+else
+	window.alert("Please select an F1 course")
+}
+function resetf1()
+{
+	if(l2==1 & l15==1 & l28==0)
+	{
+		document.getElementsByClassName("l2")[0].innerHTML = "F1/L2";
+		document.getElementsByClassName("l2")[0].style.backgroundColor="#FFFFCC";
+		document.getElementsByClassName("l15")[0].innerHTML = "F1/L15";
+		document.getElementsByClassName("l15")[0].style.backgroundColor="#FFFFCC";
+		document.getElementById("f1t").value="";
+		l15=0;
+		l2=0;
+	}
+	else
+		window.alert("Please select an F1 course");
+}
+function tf1()
+{
+	if (document.getElementById("tf1t").value!="") {
+	if (l2==0 & l15==0 & l28==0) {
+	document.getElementsByClassName("l2")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l2")[0].innerHTML = document.getElementById("tf1t").value;
+	l2++;
+	document.getElementsByClassName("l15")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l15")[0].innerHTML = document.getElementById("tf1t").value;
+	l15++;
+	document.getElementsByClassName("l28")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l28")[0].innerHTML = document.getElementById("tf1t").value;
+	l28++;
+	}
+	else
+	window.alert("Clashes with L1+L2/L15+L16/L27+L28 or F1/F1+TF1");}
+else
+	window.alert("Please select an F1+TF1 course")
+
+}
+function resettf1()
+{
+	if(l2==1 & l15==1 & l28==1){
+	document.getElementsByClassName("l2")[0].innerHTML = "F1/L2";
+	document.getElementsByClassName("l2")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l15")[0].innerHTML = "F1/L15";
+	document.getElementsByClassName("l15")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l28")[0].innerHTML = "TF1/L28";
+	document.getElementsByClassName("l28")[0].style.backgroundColor="#FFFFCC";
+	document.getElementById("tf1t").value="";
+	l2=0;
+	l15=0;
+	l28=0;
+}
+else
+window.alert("Please select an F1+TF1 course");
+}
+</script>

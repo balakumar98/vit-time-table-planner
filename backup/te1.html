@@ -1,0 +1,53 @@
+<script>
+var l22=0,l28=0;
+function te11()
+{
+	if (document.getElementById("te11t").value!="") {
+	if (l22==0) {
+	document.getElementsByClassName("l22")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l22")[0].innerHTML = document.getElementById("te11t").value;
+	l22=1;
+	}
+	else
+	window.alert("Clashes with L21+L22 or E1+TE1/TE1");}
+else
+	window.alert("Please select an TE1 course")
+}
+function resette11()
+{
+	if(l22==1)
+	{
+		document.getElementsByClassName("l22")[0].innerHTML = "TE1/L22";
+		document.getElementsByClassName("l22")[0].style.backgroundColor="#FFFFCC";
+		document.getElementById("te11t").value="";
+		l22=0;
+	}
+	else
+		window.alert("Please select an TE1 course");
+}
+function tf11()
+{
+	if (document.getElementById("tf11t").value!="") {
+	if (l28==0) {
+	document.getElementsByClassName("l28")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l28")[0].innerHTML = document.getElementById("tf11t").value;
+	l28++;
+	}
+	else
+	window.alert("Clashes with L27+L28 or F1+TF1/TF1");}
+else
+	window.alert("Please select an TF1 course")
+
+}
+function resettf11()
+{
+	if(l28==1){
+	document.getElementsByClassName("l28")[0].innerHTML = "TF1/L28";
+	document.getElementsByClassName("l28")[0].style.backgroundColor="#FFFFCC";
+		document.getElementById("tf11t").value="";
+	l28=0;
+}
+else
+window.alert("Please select an TF1 course");
+}
+</script>

@@ -1,0 +1,33 @@
+
+<script type="text/javascript">
+	var l11=0;l12=0;
+	function la11()
+	{
+	if (document.getElementById("l11t").value!="") {
+	if (l11==0 & l12==0) {
+	document.getElementsByClassName("l11")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l11")[0].innerHTML = document.getElementById("l11t").value;
+	l11=1;
+	document.getElementsByClassName("l12")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l12")[0].innerHTML = document.getElementById("l11t").value;
+	l12=1;
+	}
+	else
+	window.alert("Clashes with L11+L12 or TAA1");}
+else
+	window.alert("Please select an L11+L12 course")
+	}
+	function resetl11()
+	{
+		if (l11==1 & l12==1) {
+	document.getElementsByClassName("l11")[0].innerHTML = "TAA1/L11";
+	document.getElementsByClassName("l11")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l12")[0].innerHTML = "L12";
+	document.getElementsByClassName("l12")[0].style.backgroundColor="#FFFFCC";
+	document.getElementById("l11t").value="";
+	l11=0;
+	l12=0;
+	}else
+	window.alert("Please select an L11+L12 course")
+	}
+</script>

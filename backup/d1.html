@@ -1,0 +1,70 @@
+<script>
+var l19=0,l3=0,l16=0;
+function d1()
+{
+	if (document.getElementById("d1t").value!="") {
+	if (l19==0 & l3==0) {
+	document.getElementsByClassName("l19")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l19")[0].innerHTML = document.getElementById("d1t").value;
+	l19=1;
+	document.getElementsByClassName("l3")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l3")[0].innerHTML = document.getElementById("d1t").value;
+	l3=1;
+	}
+	else
+	window.alert("Clashes with L3+L4/L19+L20 or D1/D1+TD1");}
+else
+	window.alert("Please select an D1 course")
+}
+function resetd1()
+{	
+	if(l19==1 & l3==1 & l16==0)
+	{
+	document.getElementsByClassName("l19")[0].innerHTML = "D1/L19";
+	document.getElementsByClassName("l19")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l3")[0].innerHTML = "D1/L3";
+	document.getElementsByClassName("l3")[0].style.backgroundColor="#FFFFCC";
+	document.getElementById("d1t").value="";
+	l19=0;
+	l3=0;
+	}
+	else
+		window.alert("Please select an D1 course");
+}
+function td1()
+{
+	if (document.getElementById("td1t").value!="") {
+	if (l19==0 & l3==0 & l16==0) {
+	document.getElementsByClassName("l19")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l19")[0].innerHTML = document.getElementById("td1t").value;
+	l19++;
+	document.getElementsByClassName("l3")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l3")[0].innerHTML = document.getElementById("td1t").value;
+	l3++;
+	document.getElementsByClassName("l16")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l16")[0].innerHTML = document.getElementById("td1t").value;
+	l16++;
+	}
+	else
+	window.alert("Clashes with L3+L4/L15+L16/L19+L20 or D1/D1+TD1");}
+else
+window.alert("Please select an D1+TD1 course");
+}
+function resettd1()
+{
+	if(l19==1 & l3==1 & l16==1){
+	document.getElementsByClassName("l19")[0].innerHTML = "D1/L19";
+	document.getElementsByClassName("l19")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l3")[0].innerHTML = "D1/L3";
+	document.getElementsByClassName("l3")[0].style.backgroundColor="#FFFFCC";
+	document.getElementsByClassName("l16")[0].innerHTML = "TD1/L16";
+	document.getElementsByClassName("l16")[0].style.backgroundColor="#FFFFCC";
+	document.getElementById("td1t").value="";
+	l19=0;
+	l3=0;
+	l16=0;
+	}
+else
+window.alert("Please select an D1+TD1 course");
+}
+</script>

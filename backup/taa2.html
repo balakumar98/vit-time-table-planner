@@ -1,0 +1,90 @@
+
+<script>
+var l31=0,l44=0,l57=0,l41=0,l43=0,l56=0,l40=0,l53=0;
+function taa2()
+{
+	if (document.getElementById("taa2t").value!="") {
+	if (l31==0 & l44==0 & l57==0 & l41==0) {
+	document.getElementsByClassName("l31")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l31")[0].innerHTML = document.getElementById("taa2t").value;
+	document.getElementsByClassName("l44")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l44")[0].innerHTML = document.getElementById("taa2t").value;
+	document.getElementsByClassName("l57")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l57")[0].innerHTML = document.getElementById("taa2t").value;
+	document.getElementsByClassName("l41")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l41")[0].innerHTML = document.getElementById("taa2t").value;
+	l31=1;
+	l44=1;
+	l57=1;
+	l41=1;
+	}
+	else
+	window.alert("Clashes with L31+L32/L41+L42/L43+L44/L57+L58 or A2/A2+TA2/TA2/TAA2/A2+TA2+TAA2");}
+else
+	window.alert("Please select an A2+TA2+TAA2 course")
+}
+function resettaa2()
+{
+	if(l31==1 & l44==1 & l57==1 & l41==1)
+	{
+		document.getElementsByClassName("l31")[0].innerHTML = "A2/L32";
+		document.getElementsByClassName("l31")[0].style.backgroundColor="#FFFFCC";
+		document.getElementsByClassName("l44")[0].innerHTML = "A2/L44";
+		document.getElementsByClassName("l44")[0].style.backgroundColor="#FFFFCC";
+		document.getElementsByClassName("l57")[0].innerHTML = "TA2/L57";
+		document.getElementsByClassName("l57")[0].style.backgroundColor="#FFFFCC";
+		document.getElementsByClassName("l41")[0].innerHTML = "TAA2/L41";
+		document.getElementsByClassName("l41")[0].style.backgroundColor="#FFFFCC";
+		document.getElementById("taa2t").value="";
+		l31=0;
+		l44=0;
+		l57=0;
+		l41=0;
+	}
+	else
+		window.alert("Please select an A2+TA2+TAA2 course");
+}
+function tcc2()
+{
+	if (document.getElementById("tcc2t").value!="") {
+	if (l43==0 & l56==0 & l40==0 & l53==0) {
+	document.getElementsByClassName("l43")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l43")[0].innerHTML = document.getElementById("tcc2t").value;
+	document.getElementsByClassName("l56")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l56")[0].innerHTML = document.getElementById("tcc2t").value;
+	document.getElementsByClassName("l40")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l40")[0].innerHTML = document.getElementById("tcc2t").value;
+	document.getElementsByClassName("l53")[0].style.backgroundColor="#9ACD32";
+	document.getElementsByClassName("l53")[0].innerHTML = document.getElementById("tcc2t").value;
+	l43=1;
+	l56=1;
+	l40=1;
+	l53=1;
+	}
+	else
+	window.alert("Clashes with L39+L40/L43+L44/L53+L54/L55+L56 or C2/C2+TC2/TC2/TCC2/C2+TC2+TCC2");}
+else
+	window.alert("Please select an C2+TC2+TCC2 course")
+}
+function resettcc2()
+{
+	if(l43==1 & l56==1 & l40==1 & l53==1)
+	{
+		document.getElementsByClassName("l43")[0].innerHTML = "C2/L43";
+		document.getElementsByClassName("l43")[0].style.backgroundColor="#FFFFCC";
+		document.getElementsByClassName("l56")[0].innerHTML = "C2/L56";
+		document.getElementsByClassName("l56")[0].style.backgroundColor="#FFFFCC";
+		document.getElementsByClassName("l40")[0].innerHTML = "TC2/L40";
+		document.getElementsByClassName("l40")[0].style.backgroundColor="#FFFFCC";
+		document.getElementsByClassName("l53")[0].innerHTML = "TCC2/L53";
+		document.getElementsByClassName("l53")[0].style.backgroundColor="#FFFFCC";
+		document.getElementById("tcc2t").value="";
+		l43=0;
+		l56=0;
+		l40=0;
+		l53=0;
+	}
+	else
+		window.alert("Please select an C2+TC2+TCC2 course");
+}
+</script>
